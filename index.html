@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title> Ödev 2, Bootstrap ile Instagram Clone</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- header start -->
+    <!-- insta logo -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mb-5 border" style="height: 58px;">
+        <a class="navbar-brand mt-1" style="margin-left: 192px;" href="#"><img
+          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+      /></a>
+       
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <!-- search bar -->
+          <div class="collapse navbar-collapse d-inline-block justify-content-center">
+                <form class="form-inline my-2 my-lg-0 ml-5 d-none d-sm-block">
+                  <input
+                    class="form-control mr-sm-2 empty"
+                    type="search"
+                    placeholder="Ara"
+                    style="font-family: Arial, FontAwesome; height: 28px; width: 216px"
+                    aria-label="Search"
+                  />
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                </form>
+          </div>
+
+          <!-- features  -->
+          <div class="collapse navbar-collapse ml-5 mt-2 d-sm-none d-md-block">
+              <ul class="navbar-nav ">
+                  <li class="nav-item active mr-1">
+                      <a class="nav-link" href="#"><img src="img/house-solid.svg"  width="22px" height="22px" alt=""> <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item mr-1">
+                      <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" style="width="22px" height="22px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256.55 8C116.52 8 8 110.34 8 248.57c0 72.3 29.71 134.78 78.07 177.94 8.35 7.51 6.63 11.86 8.05 58.23A19.92 19.92 0 0 0 122 502.31c52.91-23.3 53.59-25.14 62.56-22.7C337.85 521.8 504 423.7 504 248.57 504 110.34 396.59 8 256.55 8zm149.24 185.13l-73 115.57a37.37 37.37 0 0 1-53.91 9.93l-58.08-43.47a15 15 0 0 0-18 0l-78.37 59.44c-10.46 7.93-24.16-4.6-17.11-15.67l73-115.57a37.36 37.36 0 0 1 53.91-9.93l58.06 43.46a15 15 0 0 0 18 0l78.41-59.38c10.44-7.98 24.14 4.54 17.09 15.62z"/></svg></a>
+                  </li>
+                  <li class="nav-item mr-1">
+                      <a class="nav-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="width="22px" height="22px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+                      </a>
+                  </li>
+                  <li class="nav-item mr-1">
+                      <a class="nav-link disabled"><svg xmlns="http://www.w3.org/2000/svg" style="width="22px" height="22px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg></a>
+                  </li>
+                  <li class="nav-item dropdown mr-1">
+                    <a class="nav-link  dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false">
+                      <img src="img/imgport.jpeg" class="mb-2"
+                      style="width: 23px; height: 23px; border-radius: 50%;" alt="">
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="https://www.instagram.com/rvn_territory/">Profile</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/accounts/edit/">Settings</a>
+                        <a class="dropdown-item" href="https://www.instagram.com">Log out</a>
+                      </div>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <!-- content start -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-10 offset-1 mt-3">
+          <div class="row">
+            <div class="col-7">
+
+              <!-- Stories -->
+              <div class="row p-2 mt-1 ">
+                <div class="col-2"><img class="rounded-circle" src="https://picsum.photos/id/7/50/50" alt=""><p class="ml-1 mt-1">malik</p></div>
+                <div class="col-2"><img class="rounded-circle" src="https://picsum.photos/id/3/50/50" alt=""><p class="ml-1 mt-1">salik</p></div>
+                <div class="col-2"><img class="rounded-circle" src="https://picsum.photos/id/100/50/50" alt=""><p class="mt-1">agabala</p></div>
+                <div class="col-2"><img class="rounded-circle" src="https://picsum.photos/id/234/50/50" alt=""><p class="mt-1">balaaga</p></div>
+                <div class="col-2"><img class="rounded-circle" src="https://picsum.photos/id/293/50/50" alt=""><p class="ml-2 mt-1">habil</p></div>
+                <div class="col-2"><img class="rounded-circle" src="https://picsum.photos/id/342/50/50" alt=""><p class="ml-2 mt-1">qabil</p></div>
+              </div>
+
+
+              <!-- Posts -->
+
+              <!-- post 1 -->
+              <div class="mt-3">
+                <!-- Image and text header of post-->
+                <div class="border mt-3">
+                  <nav class="navbar navbar-light bg-white">
+                    <a class="navbar-brand" href="https://www.instagram.com/jafarnajafov/">
+                      <img src="https://picsum.photos/id/34/50/50" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+                      <p class=" d-inline-block ml-2 mb-0">cengizxan</p>
+                    </a>
+                    <a  target="_blank" href="https://www.flaticon.com/search?word=more"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/></svg></a>
+                  </nav>
+                </div>
+                <!-- post content part -->
+                <div class="card ">
+                  <img src="https://picsum.photos/seed/picsum/200/200" class="card-img-top mb-0" alt="image">
+
+                  <!-- like and save part -->
+                  <div class="mt-0 mb-0">
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg>
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"/></svg>
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
+                    <svg class="mt-2 mr-3 d-inline-block align-top float-right" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/></svg>
+                  </div>
+                  <!-- info about post -part -->
+                  <span class="mt-2 mb-1 ml-3">
+                    <img src="img/imgport.jpeg" class=""
+                      style="width: 23px; height: 23px; border-radius: 50%;" alt=""> 
+                      <strong>Ravan</strong> and <strong>other 5 person</strong> liked this
+                  </span>
+
+                  <spa class="mt-2 ml-3 mb-0">
+                    <p><strong>cengizxan</strong> Here is like a paradise, what do you think let me know down below</p>
+                  </span>
+                  <span>
+                    <p style="
+                    margin-top: -14px;
+                    color: rgb(139, 133, 133);">  See all 15 comments 
+                    </p>
+
+                    <p style="margin-top: -15px"><strong style="margin-right: 5px">antonoski</strong> qaqa biraz yandan cekse idin yaxsi olardi</p>
+                    <p style="margin-top: -15px" ><strong style="margin-right: 5px">mozart</strong> oldurmusende, bizdede var o daglardan</p>
+
+                    <p  class="card-text" style=" margin-top: -10px; margin-left: -4px; font-size: 12px; color: rgb(139, 133, 133);">
+                      10 SAAT ÖNCE 
+                    </p>
+                  </span>
+                  <div  class="card-footer bg-white" style="margin-left: -16px;">
+                    <span style="
+                        color: rgb(139, 133, 133);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                          'Helvetica Neue', sans-serif;
+                        font-size: 14px;">Add comment...
+                    </span>
+                    <span class=" d-inline-block float-right" style="color: #0095f6; opacity: 50%"><strong>Share</strong></span>
+                  </div>            
+                </div> 
+
+              </div>
+
+              <!-- post 2 -->
+              <div class="mt-5">
+                <!-- Image and text header of post-->
+                <div class="border mt-3">
+                  <nav class="navbar navbar-light bg-white">
+                    <a class="navbar-brand" href="https://www.instagram.com/jafarnajafov/">
+                      <img src="https://picsum.photos/id/99/50/50" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+                      <p class=" d-inline-block ml-2 mb-0">cengizxan</p>
+                    </a>
+                    <a  target="_blank" href="https://www.flaticon.com/search?word=more"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/></svg></a>
+                  </nav>
+                </div>
+                <!-- post content part -->
+                <div class="card ">
+                  <img src="https://picsum.photos/id/234/200/200" class="card-img-top mb-0" alt="image">
+
+                  <!-- like and save part -->
+                  <div class="mt-0 mb-0">
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg>
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"/></svg>
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
+                    <svg class="mt-2 mr-3 d-inline-block align-top float-right" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/></svg>
+                  </div>
+                  <!-- info about post -part -->
+                  <span class="mt-2 mb-1 ml-3">
+                    <img src="img/imgport.jpeg" class=""
+                      style="width: 23px; height: 23px; border-radius: 50%;" alt=""> 
+                      <strong>Ravan</strong> and <strong>other 5 person</strong> liked this
+                  </span>
+
+                  <spa class="mt-2 ml-3 mb-0">
+                    <p><strong>cengizxan</strong> Here is like a paradise, what do you think let me know down below</p>
+                  </span>
+                  <span>
+                    <p style="
+                    margin-top: -14px;
+                    color: rgb(139, 133, 133);">  See all 15 comments 
+                    </p>
+
+                    <p style="margin-top: -15px"><strong style="margin-right: 5px">antonoski</strong> qaqa biraz yandan cekse idin yaxsi olardi</p>
+                    <p style="margin-top: -15px" ><strong style="margin-right: 5px">mozart</strong> oldurmusende, bizdede var o daglardan</p>
+
+                    <p  class="card-text" style=" margin-top: -10px; margin-left: -4px; font-size: 12px; color: rgb(139, 133, 133);">
+                      10 SAAT ÖNCE 
+                    </p>
+                  </span>
+                  <div  class="card-footer bg-white" style="margin-left: -16px;">
+                    <span style="
+                        color: rgb(139, 133, 133);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                          'Helvetica Neue', sans-serif;
+                        font-size: 14px;">Add comment...
+                    </span>
+                    <span class=" d-inline-block float-right" style="color: #0095f6; opacity: 50%"><strong>Share</strong></span>
+                  </div>            
+                </div> 
+
+              </div>
+
+              <!-- post 3 -->
+              <div class="mt-5">
+                <!-- Image and text header of post-->
+                <div class="border mt-3">
+                  <nav class="navbar navbar-light bg-white">
+                    <a class="navbar-brand" href="https://www.instagram.com/jafarnajafov/">
+                      <img src="https://picsum.photos/id/888/50/50" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+                      <p class=" d-inline-block ml-2 mb-0">cengizxan</p>
+                    </a>
+                    <a  target="_blank" href="https://www.flaticon.com/search?word=more"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/></svg></a>
+                  </nav>
+                </div>
+                <!-- post content part -->
+                <div class="card ">
+                  <img src="https://picsum.photos/id/670/200/200" class="card-img-top mb-0" alt="image">
+
+                  <!-- like and save part -->
+                  <div class="mt-0 mb-0">
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></svg>
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"/></svg>
+                    <svg class="mt-2 ml-3 d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
+                    <svg class="mt-2 mr-3 d-inline-block align-top float-right" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/></svg>
+                  </div>
+                  <!-- info about post -part -->
+                  <span class="mt-2 mb-1 ml-3">
+                    <img src="img/imgport.jpeg" class=""
+                      style="width: 23px; height: 23px; border-radius: 50%;" alt=""> 
+                      <strong>Ravan</strong> and <strong>other 5 person</strong> liked this
+                  </span>
+
+                  <spa class="mt-2 ml-3 mb-0">
+                    <p><strong>cengizxan</strong> Here is like a paradise, what do you think let me know down below</p>
+                  </span>
+                  <span>
+                    <p style="
+                    margin-top: -14px;
+                    color: rgb(139, 133, 133);">  See all 15 comments 
+                    </p>
+
+                    <p style="margin-top: -15px"><strong style="margin-right: 5px">antonoski</strong> qaqa biraz yandan cekse idin yaxsi olardi</p>
+                    <p style="margin-top: -15px" ><strong style="margin-right: 5px">mozart</strong> oldurmusende, bizdede var o daglardan</p>
+
+                    <p  class="card-text" style=" margin-top: -10px; margin-left: -4px; font-size: 12px; color: rgb(139, 133, 133);">
+                      10 SAAT ÖNCE 
+                    </p>
+                  </span>
+                  <div  class="card-footer bg-white" style="margin-left: -16px;">
+                    <span style="
+                        color: rgb(139, 133, 133);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                          'Helvetica Neue', sans-serif;
+                        font-size: 14px;">Add comment...
+                    </span>
+                    <span class=" d-inline-block float-right" style="color: #0095f6; opacity: 50%"><strong>Share</strong></span>
+                  </div>            
+                </div> 
+
+              </div>
+
+
+
+            </div>
+
+            <!-- Right-side bar -->
+            <div class="col-4 ml-4" >
+              <div class=" sticky-top bg-white"  style="position: fixed; top: 60px; width: 280px;">
+                <img src="img/imgport.jpeg" class="" style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid rgb(238, 39, 82)" alt="">
+                <span class="d-inline-block ml-3 mt-5"><strong>ravanidrisli</strong></span>
+                <p  class="mt-3 d-inline-block" style="
+                  color: rgb(139, 133, 133);
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                    'Helvetica Neue', sans-serif;" >
+                  Suggestions for you
+                </p>
+                <span class="d-inline-block float-right mt-3"><strong>See all</strong></span>
+
+                <div  class="" style="list-style-type: none; position: relative; left: -10px;" >
+                  <li><img class="m-2" style="width: 30px; height: 30px; border-radius: 50%; " src="https://picsum.photos/id/7/200/300" alt=""><strong>saloncueshref</strong> <a class="d-inline-block align-top float-right mt-2 "    href="">follow </a></li> 
+                  <li><img class="m-2" style="width: 30px; height: 30px; border-radius: 50%; " src="https://picsum.photos/id/237/200/300" alt=""><strong>pridelbil_azik</strong> <a class="d-inline-block align-top float-right mt-2 " href="">follow </a></li>
+                  <li><img class="m-2" style="width: 30px; height: 30px; border-radius: 50%; " src="https://picsum.photos/id/274/200/300" alt=""><strong>nature_life</strong> <a class="d-inline-block align-top float-right mt-2"     href="">follow </a></li>
+                  <li><img class="m-2" style="width: 30px; height: 30px; border-radius: 50%; " src="https://picsum.photos/id/278/200/300" alt=""><strong>sofiaanasanda</strong> <a class="d-inline-block align-top float-right mt-2 "  href="">follow </a></li>
+                </div>
+                <p style="color: lightgray; font-size: 11px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, necessitatibus veniam hic consequuntur deleniti optio excepturi sint temporibus eligendi atque!</p>
+                <p style="color: lightgray; font-size: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">© 2021 INSTAGRAM FROM RAVAN</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse aliquam fugit magni facilis necessitatibus, totam sapiente distinctio veritatis quam adipisci illum eum aliquid culpa rem inventore doloremque commodi nesciunt?temperate</h1>
+     -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
